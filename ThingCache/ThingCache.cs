@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using FakeItEasy;
 using NUnit.Framework;
 
 namespace MockFramework
@@ -43,9 +44,12 @@ namespace MockFramework
 		[SetUp]
 		public void SetUp()
 		{
-			//thingService = A...
+			thingService = A.Fake<IThingService>();
 			thingCache = new ThingCache(thingService);
 		}
+
+		[Test]
+		public void 
 
 		//TODO: написать простейший тест, а затем все остальные
 		//Live Template tt работает!
